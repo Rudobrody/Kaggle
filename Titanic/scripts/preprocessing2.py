@@ -3,9 +3,9 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 
 
-class Obrobka:
+class Obrobka2:
     def __init__(self):
-        path = 'data/train.csv' 
+        path = 'data/test.csv' 
         train_data = pd.read_csv(path)
         
 
@@ -48,7 +48,10 @@ class Obrobka:
         # Checking if there are so anomaly in the all features i.e. spelling mistake
 
 
-        train_float_data = train_data.astype(float)
+        self.train_float_data = train_data.astype(float)
+        """
+        
+    
         # Splitting dataset for training and testing 
         X = train_float_data.drop(columns=['Survived'])
         y = train_float_data['Survived']
@@ -63,6 +66,9 @@ class Obrobka:
         #print(X_train)
 
         # print(train_data)
-        # print('\n\n')
+        """
+        # print('\n\n')"
+        
     def zwrot(self):
-        return(self.X_train, self.X_train, self.X_test, self.y_train, self.y_test)
+        return(self.train_float_data)
+        
